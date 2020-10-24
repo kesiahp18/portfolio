@@ -1,5 +1,75 @@
+:root {
+    --primary-color: #c3d6f0;
+    --secondary-color: #193247;
+    --tertiary-color: #a8dadd;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    background-color: var(--primary-color);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--secondary-color);
+}
+header {
+    background-color: var(--secondary-color);
+    padding: 25px 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+header h1 {
+    border: var(--tertiary-color) solid 5px;
+    color: var(--tertiary-color);
+    padding: 15px 20px;
+    margin: 10px;
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+
+
+}
+header nav ul li a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    padding: 30px;
+    line-height: 1.5;
+}
+.hero {
+    background-image: url("../images/hero-image.jpg");
+    background-size: cover;
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+}
+.subtitle {
+    background-color: var(--tertiary-color);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+img {
+    width: 80px;
+    flex-wrap: wrap;
+}
+/*MEDIA QUERIES*/
+
+/*For desktops*/
+@media screen and (min-width: 980px) {
+    /*todo*/
+}
+
+/*For smaller desktops*/
+@media screen and (min-width: 768px) {
+    /*todo*/
+}
+
+/*For tablets*/
+@media screen and (min-width: 575px) {
+    /*todo*/
 }
