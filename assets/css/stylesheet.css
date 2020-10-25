@@ -76,22 +76,27 @@ section {
 }
 .section-title {
     border-bottom: var(--secondary-color) solid 5px;
-    font-size: 25px;
+    font-size: 40px;
     text-align: center;
     padding-bottom: 15px;
     margin: 0 auto 20px auto;
     width: 50%;
 }
+.project-grid-wrapper p {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 3px;
+}
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3 1fr);
-    grid-template-rows: repeat(3 1fr);
-    grid-gap: 5px;
+    display: flex;
+    grid-gap: 20px;
+    flex-direction: column;
 }
 .grid-container > * {
     border: var(--secondary-color) solid 5px;
     display: flex;
     background-size: cover;
+    height: 50vh;
 }
 .grid-container a {
     background-color: rgb(24, 50, 70, 0.66);
@@ -104,7 +109,6 @@ section {
     grid-column: 1/ span 2;
     grid-row: 1/span 2;
     background-image: url("../images/project-1.jpeg");
-    height: 200px;
 }
 .project-2 {
     grid-column:3;
@@ -115,7 +119,6 @@ section {
 }
 .project-4 {
     background-image: url("../images/project-4.jpg");
-    height: 200px;
 }
 .project-5 {
     background-image: url("../images/project-5.jpg");
@@ -142,6 +145,17 @@ address a {
 
 /*For desktops*/
 @media screen and (min-width: 980px) {
+    .grid-container {
+        display: grid;
+        grid-gap: 10px;
+    }
+    header {
+        justify-content: space-between;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+    }
     section {
         display: flex;
     }
@@ -156,7 +170,7 @@ address a {
         text-align: left;
         width: 15vw;
         border-right: var(--secondary-color) solid 15px;
-        font-size: 30px;
+        font-size: 25px;
     }
     .section-content {
         text-align: left;
@@ -169,15 +183,25 @@ address a {
     }
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(3 1fr);
-        grid-template-rows: repeat(3 1fr);
         grid-gap: 10px;
+        width: 60vw;
+        height: 60vw;
+    }
+    .grid-container a {
+        transition: 1s;
+    }
+    .grid-container a:hover {
+        background-color: transparent;
+    }
+    .grid-container > * {
+        height: auto;
+    }
+
 }
 
 /*For smaller desktops*/
 @media screen and (min-width: 768px) {
 
-}
 }
 
 /*For tablets*/
